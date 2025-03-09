@@ -46,4 +46,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected function donations()
+    {
+        return $this->hasMany(Donation::class);
+    }
 }
